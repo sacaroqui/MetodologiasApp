@@ -1,1 +1,53 @@
-<p>kanban works!</p>
+<h2>Tabla Resumen Comparación de Metodologías y Marcos de Trabajo Gestión de Proyectos</h2>
+<mat-divider></mat-divider>
+<br>
+<div fxLayout="row">
+    <div fxFlex="100">
+        <div fxLayout="col">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="item">
+                    <th mat-header-cell *matHeaderCellDef> Items de Comparación</th>
+                    <td mat-cell *matCellDef="let element"> {{element.item}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="PMI">
+                    <th mat-header-cell *matHeaderCellDef> PMI </th>
+                    <td mat-cell *matCellDef="let element"> {{element.PMI}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="PRINCE2">
+                    <th mat-header-cell *matHeaderCellDef> PRINCE2 </th>
+                    <td mat-cell *matCellDef="let element"> {{element.PRINCE2}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="SCRUM">
+                    <th mat-header-cell *matHeaderCellDef> SCRUM </th>
+                    <td mat-cell *matCellDef="let element"> {{element.SCRUM}} </td>
+                </ng-container>
+
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="KANBAN">
+                    <th mat-header-cell *matHeaderCellDef> KANBAN </th>
+                    <td mat-cell *matCellDef="let element"> {{element.KANBAN}} </td>
+                </ng-container>
+
+
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>

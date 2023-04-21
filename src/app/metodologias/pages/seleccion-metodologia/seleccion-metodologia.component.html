@@ -1,1 +1,235 @@
-<p>seleccion-metodologia works!</p>
+<h1>Metodologías Según Grado de Afinidad</h1>
+
+<div fxLayout="row" fxLayoutGap="20">
+    <div fxFlex="50">
+        <h2>Responda las siguientes preguntas</h2>
+        <mat-divider></mat-divider>
+        <br>
+        <div style="height: 400px;
+                    overflow-x: hidden;
+                    overflow-y: auto;">
+            <form fxLayout="column" [formGroup]="miFormulario" (ngSubmit)="calcular()">
+
+                <h3>{{preguntas[0].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta1">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[1].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta2">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[2].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta3">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[3].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta4">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[4].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta5">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[5].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta6">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[6].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta7">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[7].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta8">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[8].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta9">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[9].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta10">
+                        <div *ngFor="let posibleOpcion of opcOtrasPreguntas">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[10].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta11">
+                        <div *ngFor="let posibleOpcion of opcOtrasPreguntas">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[11].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta12">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[12].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta13">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[13].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta14">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[14].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta15">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[15].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta16">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+                <h3>{{preguntas[16].titulo}}</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>select</mat-label>
+                    <mat-select formControlName="pregunta17">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
+                            <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+
+
+
+
+
+
+
+
+                <!-- <h3>2. pregunta 2</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>Select</mat-label>
+                    <mat-select formControlName="pregunta2">
+                        <mat-option value='5' required>First option</mat-option>
+                        <mat-option value='10'>Second option</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <h3>2. pregunta 3</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>Select</mat-label>
+                    <mat-select formControlName="pregunta3">
+                        <mat-option value='5' required>First option</mat-option>
+                        <mat-option value='10'>Second option</mat-option>
+                    </mat-select>
+                </mat-form-field> -->
+            </form>
+            <section>
+                <div fxLayout="row-reverse">
+
+                    <div fxFlex="10" class="example-button-row">
+                        <button mat-raised-button color="accent" type="button" (click)="limpiar()" [disabled]="miFormulario.invalid">Limpiar</button>
+                    </div>
+                    <div fxFlex="30" class="example-button-row">
+                        <button mat-raised-button color="primary" type="button" (click)="calcular()" [disabled]="miFormulario.invalid">Ver Resultado</button>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+    <div fxFlex="50">
+        <!-- <span>Respuestas</span>
+        <pre>{{miFormulario.value | json}}</pre>
+        <pre>{{miFormulario.valid}}</pre> -->
+        <h1>Diagrama Afinidad Metodológica</h1>
+        <hr>
+        <div class="col mt-3">
+            <div class="row">
+                <h3 *ngIf="!mostrarGrafica">Para ver el resultado de la afinidad metodológica que mas se ajusta a las caracteristicas del proyecto y la orgazación debe responder las preguntas planteadas.</h3>
+                <app-graficas *ngIf="mostrarGrafica" [valoresGrafica]="valoresGrafica"></app-graficas>
+            </div>
+        </div>
+    </div>
+</div>
