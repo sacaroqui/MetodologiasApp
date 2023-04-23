@@ -10,6 +10,7 @@ export class SeleccionMetodologiaComponent implements OnInit {
 
   mostrarGrafica:boolean=false;
   valoresGrafica:number[]=[];
+  tipoMetodologia:string='';
 
   preguntas=[
     {
@@ -182,9 +183,22 @@ function obtenerModa(vector_valores:number[]){
 
 // ---- FIN CALCULO DE LA MODA RESULTADOS DEL FORMULARIO ----
 
+  switch(moda){
+    case 10:
+      this.tipoMetodologia='Tradicional'
+      break;
+    case 8:
+      this.tipoMetodologia='Hibrida'
+      break;
+    case 6:
+      this.tipoMetodologia='Hibrida'
+      break;
+    default:
+      this.tipoMetodologia='Ágil'  
+  }
+
   this.mostrarGrafica=true;
-   
-    
+       
   }
 
   limpiar(){

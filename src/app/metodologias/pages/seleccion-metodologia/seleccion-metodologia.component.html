@@ -226,9 +226,15 @@
         <hr>
         <div class="col mt-3">
             <div class="row">
+                <h1 *ngIf="mostrarGrafica"><small>La metodología que más se ajusta a su proyecto es: </small>{{tipoMetodologia}}</h1>
+            </div>
+        </div>
+        <div class="col mt-3">
+            <div class="row">
                 <h3 *ngIf="!mostrarGrafica">Para ver el resultado de la afinidad metodológica que mas se ajusta a las caracteristicas del proyecto y la orgazación debe responder las preguntas planteadas.</h3>
                 <app-graficas *ngIf="mostrarGrafica" [valoresGrafica]="valoresGrafica"></app-graficas>
             </div>
         </div>
+
     </div>
 </div>
