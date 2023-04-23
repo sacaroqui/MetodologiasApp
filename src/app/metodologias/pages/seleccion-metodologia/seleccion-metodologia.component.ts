@@ -144,7 +144,7 @@ export class SeleccionMetodologiaComponent implements OnInit {
     
 function calcularFrecuencia(numero:number, vector:number[]){
   var num_veces=0
-  for (var pos in vector) {
+  for (let pos in vector) {
       if (vector[pos]==numero) {
           num_veces++
       }
@@ -155,9 +155,9 @@ function calcularFrecuencia(numero:number, vector:number[]){
 /* Dado un vector de números se nos devuelve la posición
 * del número mayor*/
 function obtenerPosMayor(vector_valores:number[]){
-  var posMayor=0
-  var numMayor=vector_valores[0]
-  for (var pos in vector_valores){
+  let posMayor=0
+  let numMayor=vector_valores[0]
+  for (let pos in vector_valores){
       if (vector_valores[pos]>numMayor) {
           numMayor=vector_valores[pos];
           posMayor=Number(pos);
@@ -167,17 +167,17 @@ function obtenerPosMayor(vector_valores:number[]){
 }
 /* Función que devuelve el número "moda" de un vector*/
 function obtenerModa(vector_valores:number[]){
-  var frecuencias=new Array(vector_valores.length)
-  for (var pos in vector_valores){
-       var numero=vector_valores[pos]
+  let frecuencias=new Array(vector_valores.length)
+  for (let pos in vector_valores){
+       let numero=vector_valores[pos]
        frecuencias[pos]=calcularFrecuencia(numero, vector_valores)
   }
-  var posModa=obtenerPosMayor(frecuencias)
+  let posModa=obtenerPosMayor(frecuencias)
   return vector_valores[posModa]
 
 }
 
-  var moda=obtenerModa(vector)
+  let moda=obtenerModa(vector)
   console.log(moda);
 
 // ---- FIN CALCULO DE LA MODA RESULTADOS DEL FORMULARIO ----
@@ -191,6 +191,7 @@ function obtenerModa(vector_valores:number[]){
     this.miFormulario.reset();
     this.valoresGrafica=[];
     this.mostrarGrafica=false;
+    
   }
 
 }
