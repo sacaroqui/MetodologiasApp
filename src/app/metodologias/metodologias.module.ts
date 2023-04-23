@@ -7,8 +7,12 @@ import { Prince2Component } from './pages/prince2/prince2.component';
 import { ScrumComponent } from './pages/scrum/scrum.component';
 import { KanbanComponent } from './pages/kanban/kanban.component';
 import { MetodologiasRoutingModule } from './metodologias-routing.module';
+import { NgChartsModule } from 'ng2-charts';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { GraficasComponent } from './components/graficas/graficas.component';
 
 
 
@@ -19,12 +23,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     PMIComponent,
     Prince2Component,
     ScrumComponent,
-    KanbanComponent
+    KanbanComponent,
+    GraficasComponent
   ],
   imports: [
     CommonModule,
     MetodologiasRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    NgChartsModule
   ]
 })
 export class MetodologiasModule { }

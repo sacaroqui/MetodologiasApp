@@ -1,4 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.ajusteScroll {
+    /* height: 350px;
+    overflow-x: hidden;
+    overflow-y: auto; */
+    /* margin: 2rem auto; */
+    /* border: 0.5px solid #aaa; */
+    height: 320px;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.ajusteScroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.ajusteScroll::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.ajusteScroll::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+.ajusteScroll::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.ajusteScroll::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.ajusteScroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.tamanoForm {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.ubicacionBotones {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.grafica {
+    width: 80%;
+}

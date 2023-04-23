@@ -13,20 +13,9 @@ const routes:Routes=[
     path:'',
     component:HomeComponent,
     children:[
+      
       {
-        path:'pmi',
-        component:PMIComponent
-      },
-      {
-        path:'prince',
-        component:Prince2Component
-      },
-      {
-        path:'scrum',
-        component:ScrumComponent
-      },
-      {
-        path:'kanban',
+        path:'resumen',
         component:KanbanComponent
       },
       {
@@ -35,7 +24,7 @@ const routes:Routes=[
       },
       {
         path:'**',
-        redirectTo:'pmi'
+        redirectTo:'resumen'
       }
     ]
   }

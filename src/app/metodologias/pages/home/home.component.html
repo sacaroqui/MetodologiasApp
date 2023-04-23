@@ -1,3 +1,27 @@
-<h1>Metodologías Proyectos App</h1>
-<hr>
-<router-outlet></router-outlet>
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="push" #sidevar>
+        <mat-toolbar color="accent">
+            <span>Menú</span>
+            <span class="spacer"></span>
+            <button mat-icon-button (click)="sidevar.toggle()">
+                <mat-icon fontIcon="menu"></mat-icon>
+            </button>
+        </mat-toolbar>
+        <mat-nav-list>
+            <a mat-list-item (click)="sidevar.toggle()" routerLink="./resumen">Tabla Resumen</a>
+            <a mat-list-item (click)="sidevar.toggle()" routerLink="./seleccion">Selección Metodología</a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button (click)="sidevar.toggle()">
+            <mat-icon fontIcon="menu"></mat-icon>
+        </button>
+        <span>Metodologías de Proyectos</span>
+    </mat-toolbar>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+
+</mat-sidenav-container>
