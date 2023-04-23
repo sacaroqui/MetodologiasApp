@@ -21,9 +21,9 @@ export class GraficasComponent implements OnInit , OnChanges {
   public radarChartData: ChartData<'radar'> = {
     labels: this.radarChartLabels,
     datasets: [
-
-      { data: [ 0, 0, 0, 0 ,0, 0, 0, 0, 0 ,0, 0, 0, 0, 0 ,0, 0, 0 ], label: 'Resultado' },
-      { data: [ 0, 0, 0, 0 ,0, 0, 0, 0, 0 ,0, 0, 0, 0, 0 ,0, 0, 0 ], label: 'Resultado1' },
+      
+      { data: [ 0, 0, 0, 0 ,0, 0, 0, 0, 0 ,0, 0, 0, 0, 0 ,0, 0, 0 ],label:'Resultado' },
+      { data: [ 0, 0, 0, 0 ,0, 0, 0, 0, 0 ,0, 0, 0, 0, 0 ,0, 0, 0 ],label:'Punto Origen' },
       { data: [ 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 ], label: 'Ágil' },
       { data: [ 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  ], label: 'Hibrido' },
       { data: [ 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10  ], label: 'Tradicional' },

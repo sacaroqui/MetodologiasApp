@@ -109,23 +109,23 @@ export class SeleccionMetodologiaComponent implements OnInit {
   
 
   miFormulario:FormGroup= this.fb.group({
-    pregunta1:['',[Validators.required]],
-    pregunta2:['',[Validators.required]],
-    pregunta3:['',[Validators.required]],
-    pregunta4:['',[Validators.required]],
-    pregunta5:['',[Validators.required]],
-    pregunta6:['',[Validators.required]],
-    pregunta7:['',[Validators.required]],
-    pregunta8:['',[Validators.required]],
-    pregunta9:['',[Validators.required]],
-    pregunta10:['',[Validators.required]],
-    pregunta11:['',[Validators.required]],
-    pregunta12:['',[Validators.required]],
-    pregunta13:['',[Validators.required]],
-    pregunta14:['',[Validators.required]],
-    pregunta15:['',[Validators.required]],
-    pregunta16:['',[Validators.required]],
-    pregunta17:['',[Validators.required]],
+    pregunta1:['2',[Validators.required]],
+    pregunta2:['2',[Validators.required]],
+    pregunta3:['2',[Validators.required]],
+    pregunta4:['10',[Validators.required]],
+    pregunta5:['10',[Validators.required]],
+    pregunta6:['8',[Validators.required]],
+    pregunta7:['4',[Validators.required]],
+    pregunta8:['4',[Validators.required]],
+    pregunta9:['4',[Validators.required]],
+    pregunta10:['6',[Validators.required]],
+    pregunta11:['6',[Validators.required]],
+    pregunta12:['2',[Validators.required]],
+    pregunta13:['8',[Validators.required]],
+    pregunta14:['8',[Validators.required]],
+    pregunta15:['10',[Validators.required]],
+    pregunta16:['4',[Validators.required]],
+    pregunta17:['4',[Validators.required]],
 
   })
 
@@ -136,17 +136,54 @@ export class SeleccionMetodologiaComponent implements OnInit {
 
   calcular(){ 
     const resp= Object.values(this.miFormulario.value)
+    const vector=resp.map(Number);
     const valores=resp.map(Number);
     this.valoresGrafica=resp.map(Number);
-    let resultado=0;
-    valores.forEach(valor=>{
-      resultado=resultado+valor
-    })
 
-    this.mostrarGrafica=true;
+// ---- CALCULO DE LA MODA RESULTADOS DEL FORMULARIO ----
+    
+function calcularFrecuencia(numero:number, vector:number[]){
+  var num_veces=0
+  for (var pos in vector) {
+      if (vector[pos]==numero) {
+          num_veces++
+      }
+  }
+  return num_veces
+}
 
-    console.log(this.valoresGrafica);
-    console.log(resultado);
+/* Dado un vector de números se nos devuelve la posición
+* del número mayor*/
+function obtenerPosMayor(vector_valores:number[]){
+  var posMayor=0
+  var numMayor=vector_valores[0]
+  for (var pos in vector_valores){
+      if (vector_valores[pos]>numMayor) {
+          numMayor=vector_valores[pos];
+          posMayor=Number(pos);
+      }
+  }
+  return posMayor
+}
+/* Función que devuelve el número "moda" de un vector*/
+function obtenerModa(vector_valores:number[]){
+  var frecuencias=new Array(vector_valores.length)
+  for (var pos in vector_valores){
+       var numero=vector_valores[pos]
+       frecuencias[pos]=calcularFrecuencia(numero, vector_valores)
+  }
+  var posModa=obtenerPosMayor(frecuencias)
+  return vector_valores[posModa]
+
+}
+
+  var moda=obtenerModa(vector)
+  console.log(moda);
+
+// ---- FIN CALCULO DE LA MODA RESULTADOS DEL FORMULARIO ----
+
+  this.mostrarGrafica=true;
+   
     
   }
 
