@@ -66,3 +66,17 @@ body {
 .grafica {
     width: 80%;
 }
+
+.alertas {
+    background-color: #d1ecf1;
+    color: #343a40;
+    border-radius: 4px;
+}
+
+.margeAlertas {
+    padding: 10px;
+}
+
+.margeAlertas2 {
+    padding: 0px 10px 10px;
+}

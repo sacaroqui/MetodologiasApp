@@ -226,13 +226,31 @@
         <hr>
         <div class="col mt-3">
             <div class="row">
-                <h1 *ngIf="mostrarGrafica"><small>La metodología que más se ajusta a su proyecto es: </small>{{tipoMetodologia}}</h1>
+                <div class="alertas">
+                    <h1 *ngIf="mostrarGrafica" class="margeAlertas"><small>La metodología que más se ajusta a tu proyecto es: </small>{{tipoMetodologia}}. <br> <small><small>Si deseas conocer la metodología que mas se ajusta a tu proyecto <a routerLink="/metodologias/scrum">Click Aqui</a></small></small>
+                    </h1>
+
+
+                </div>
+
+                <app-graficas *ngIf="mostrarGrafica" [valoresGrafica]="valoresGrafica"></app-graficas>
             </div>
+            <!-- <div *ngIf="mostrarGrafica" class="row alertas margeAlertas2">
+                <h1> <small>La metodología que más se ajusta a tu proyecto es:</small>{{tipoMetodologia}}.</h1>
+                <h3>Si deseas conocer la metodología que mas se ajusta a tu proyecto <a href="">Click Aqui</a></h3>
+
+                <div>
+
+                </div>
+            </div> -->
         </div>
         <div class="col mt-3">
             <div class="row">
-                <h3 *ngIf="!mostrarGrafica">Para ver el resultado de la afinidad metodológica que mas se ajusta a las caracteristicas del proyecto y la orgazación debe responder las preguntas planteadas.</h3>
-                <app-graficas *ngIf="mostrarGrafica" [valoresGrafica]="valoresGrafica"></app-graficas>
+                <div class="alertas">
+                    <h3 *ngIf="!mostrarGrafica" class="margeAlertas">Para ver el resultado de la afinidad metodológica que mas se ajusta a las caracteristicas del proyecto y la orgazación debes responder las preguntas planteadas.</h3>
+                </div>
+
+                <!-- <app-graficas *ngIf="mostrarGrafica" [valoresGrafica]="valoresGrafica"></app-graficas> -->
             </div>
         </div>
 
