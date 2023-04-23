@@ -4,8 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-seleccion-metodologia',
   templateUrl: './seleccion-metodologia.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class SeleccionMetodologiaComponent implements OnInit {
 

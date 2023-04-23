@@ -13,3 +13,18 @@ body {
 .spacer {
     flex: 1 1 auto;
 }
+
+.ajusteScroll {
+    height: 350px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.tamanoForm {
+    width: 90%;
+}
+
+.ubicacionBotones {
+    width: 90%;
+    margin-top: 20px;
+}

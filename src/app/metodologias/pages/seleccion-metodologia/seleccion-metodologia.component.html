@@ -5,10 +5,8 @@
         <h2>Responda las siguientes preguntas</h2>
         <mat-divider></mat-divider>
         <br>
-        <div style="height: 400px;
-                    overflow-x: hidden;
-                    overflow-y: auto;">
-            <form fxLayout="column" [formGroup]="miFormulario" (ngSubmit)="calcular()">
+        <div class="ajusteScroll">
+            <form class="tamanoForm" fxLayout="column" [formGroup]="miFormulario" (ngSubmit)="calcular()">
 
                 <h3>{{preguntas[0].titulo}}</h3>
                 <mat-form-field appearance="fill">
@@ -204,6 +202,8 @@
                     </mat-select>
                 </mat-form-field> -->
             </form>
+        </div>
+        <div class="ubicacionBotones">
             <section>
                 <div fxLayout="row-reverse">
 
@@ -216,7 +216,6 @@
                 </div>
 
             </section>
-
         </div>
     </div>
     <div fxFlex="50">
