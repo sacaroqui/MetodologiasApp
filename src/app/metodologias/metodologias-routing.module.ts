@@ -23,6 +23,10 @@ const routes:Routes=[
         component:SeleccionMetodologiaComponent
       },
       {
+        path:'scrum',
+        component:ScrumComponent
+      },
+      {
         path:'**',
         redirectTo:'resumen'
       }
