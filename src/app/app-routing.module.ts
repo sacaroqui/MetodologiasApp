@@ -8,10 +8,6 @@ const routes:Routes=[
     loadChildren: () => import('./metodologias/metodologias.module').then(m=>m.MetodologiasModule)
   },
   {
-    path:'404',
-    component:ErrorPageComponent
-  },
-  {
     path:'**',
     redirectTo: 'metodologias'
   }
