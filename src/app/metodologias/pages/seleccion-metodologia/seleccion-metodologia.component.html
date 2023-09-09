@@ -1,4 +1,4 @@
-<h1>Metodologías Según Grado de Afinidad</h1>
+<h1>Enfoque Metodológico Según Grado de Afinidad</h1>
 
 <div fxLayout="row" fxLayoutGap="20">
     <div fxFlex="50">
@@ -102,7 +102,7 @@
                 <mat-form-field appearance="fill">
                     <mat-label>select</mat-label>
                     <mat-select formControlName="pregunta10">
-                        <div *ngFor="let posibleOpcion of opcOtrasPreguntas">
+                        <div *ngFor="let posibleOpcion of opcPregunta1a9">
                             <mat-option [value]='posibleOpcion.valor' required>{{posibleOpcion.opcion}}</mat-option>
                         </div>
                     </mat-select>
@@ -227,7 +227,7 @@
         <div class="col mt-3">
             <div class="row">
                 <div class="alertas">
-                    <h1 *ngIf="mostrarGrafica" class="margeAlertas"><small>La metodología que más se ajusta a tu proyecto es: </small>{{tipoMetodologia}}. <br> <small><small>Si deseas conocer la metodología que mas se ajusta a tu proyecto <a routerLink="/metodologias/scrum">Click Aqui</a></small></small>
+                    <h1 *ngIf="mostrarGrafica" class="margeAlertas"><small>La metodología que más se ajusta a tu proyecto es: </small>{{tipoMetodologia}}
                     </h1>
 
 
